@@ -2,7 +2,7 @@
     <div class='container-fluid vue-resume text-center'>
         <div class="d-print-none">
             <router-link to='/' title='Home'><i class="fas fa-home"></i></router-link>
-            <a href='javascript:return' @click='generateDoc' title='Download PDF'><i class="fas fa-download"></i></a>
+            <a href='javascript:' @click='generateDoc' title='Download PDF'><i class="fas fa-download"></i></a>
         </div>
         <div class='container'>
             <div 
@@ -154,6 +154,7 @@
                     this.print = false;
                     element.className = className;
                     this.$refs.spinner.hidden = true;
+                    this.$toast.success('Successfully exported to PDF.');
                 });
             }
         }
