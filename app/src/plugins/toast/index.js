@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Toast from './Toast.vue';
 
+const toastTime = 6000;
 const Plugin = {
     install(Vue, options) {
         Vue.component('toast', Toast);
@@ -27,13 +28,13 @@ const Plugin = {
                 if(typeof message === 'object'){
                     messages.id = messageCount;
                     messages.push(message);
-                    setTimeout(() => messages.shift(), message.timeout || 3000)
+                    setTimeout(() => messages.shift(), message.timeout || toastTime)
                 } else {
                     messages.push({
                         id: messageCount,
                         content: message,
                     })
-                    setTimeout(() => messages.shift(), 3000)
+                    setTimeout(() => messages.shift(), toastTime)
                 }
                 messageCount++;
             },
