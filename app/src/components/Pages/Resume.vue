@@ -12,6 +12,7 @@
                 <a href="mailto:info@pemery.co"><i class="fas fa-phone mx-1"></i>info@pemery.co</a>
                 <a href="tel:+15204772587"><i class="fas fa-envelope mx-1"></i>+1 (520) 477-2587</a>
                 <a href='https://github.com/ssblur/' title='Github'><i class="fab fa-github mx-1"></i>Github</a>
+                <a href='http://pemery.co' title='Website'><i class="fas fa-globe mx-1"></i>http://pemery.co</a>
                 <hr class='border-light'>
                 <div class="row border-bottom border-light pb-2">
                     <div class="col-3 font-weight-bold">EDUCATION</div>
