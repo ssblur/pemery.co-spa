@@ -1,0 +1,4 @@
+dist/*.js
+dist/*.LICENSE.txt
+node_modules/
+.vscode
