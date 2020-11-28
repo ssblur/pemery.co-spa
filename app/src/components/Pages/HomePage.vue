@@ -1,46 +1,46 @@
 <template>
     <div class='container-fluid vue-homepage'>
-        <h1 class='title text-center'>Patrick Emery</h1>
-        <div class="container text-center">
-            <div>
-                <h4>
-                    <i class="fas fa-phone mr-3"></i>
-                    <a href="tel:+15204772587">
-                        +1 (520) 477-2587
-                    </a>
-                </h4>
-            </div>
-            <div>
-                <h4>
-                    <i class="fas fa-envelope mr-3"></i>
-                    <a href="mailto:info@pemery.co">
-                        info@pemery.co
-                    </a>
-                </h4>
-            </div>
-            <div>
-                <div class="d-inline-flex">
-                    <a href='https://github.com/ssblur/' title='Github'>
-                        <h2>
+        <div class="container p-3 wave-bg border-light">
+            <div class="row">
+                <div class="col-6">
+                    <h1 class='title title-grad-1'>Patrick Emery</h1>
+                    <h1 class='title title-grad-2'>Patrick Emery</h1>
+                    <h1 class='title title-grad-3'>Patrick Emery</h1>
+                    <br>
+
+                    <div class='btn-group float-left'>
+                        <a href='https://github.com/ssblur/' title='Github' class='btn border-light go-btn' style='vertical-align: baseline;'>
                             <i class="fab fa-github mx-2"></i>
-                        </h2>
-                    </a>
-                </div>
-                <div class="d-inline-flex">
-                    <a href='https://twitter.com/SSBlur' title='Twitter'>
-                        <h2>
+                        </a>
+                        <a href='https://twitter.com/SSBlur' title='Twitter' class='btn border-light go-btn' style='vertical-align: baseline;'>
                             <i class="fab fa-twitter mx-2"></i>
-                        </h2>
-                    </a>
+                        </a>
+                    </div>
+                    <div class='btn-group float-left ml-5'>
+                        <router-link to='/contract' class='btn border-light' hidden>
+                            Contracts
+                        </router-link>
+                        <router-link to='/resume' class='btn border-light go-btn'>
+                            Resume
+                        </router-link>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="container text-center mt-5">
-            <div class='mt-1' hidden> <!-- Once this is done it will be re-added. -->
-                <router-link to='/contract' class='btn border-light'><h4>Contracts</h4></router-link>
-            </div>
-            <div class='mt-1'>
-                <router-link to='/resume' class='btn border-light'><h4>Resume</h4></router-link>
+                <div class="col-6 text-right">
+                    <div class="bottom-right mr-2">
+                        <div class='m-0 p-0'>
+                            <a href="mailto:info@pemery.co" class='btn border-light'>
+                                info@pemery.co
+                                <i class="fas fa-envelope ml-2"></i>
+                            </a>
+                        </div>
+                        <div class='m-0 p-0'>
+                            <a href="tel:+15204772587" class='btn border-light'>
+                                +1 (520) 477-2587
+                                <i class="fas fa-phone ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -51,10 +51,113 @@
         color: inherit;
         cursor: pointer;
     }
+
     .vue-homepage {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+    }
+    .vue-homepage * .btn {
+        border-radius: 0;
+    }
+
+    .bottom-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .title-grad-1 {
+        text-transform: uppercase;
+        opacity: 25%;
+    }
+    .title-grad-2 {
+        text-transform: uppercase;
+        opacity: 50%;
+    }
+    .title-grad-3 {
+        text-transform: uppercase;
+    }
+
+    .go-btn:hover {
+        color: var(--dark);
+    }
+    .go-btn:before {
+        content: "";
+        position: absolute;
+        background: var(--light);
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 100%;
+        z-index: -1;
+        transition: top 0.09s ease-in;
+    }
+    .go-btn:hover:before {
+        top: 0;
+    }
+
+    .wave-bg {
+        position: relative;
+        overflow: hidden;
+    }
+    @keyframes wave-bg-before {
+        0% {
+            border-radius: 100% 50%;
+            top: 50%;
+        }
+        50% {
+            border-radius: 50% 90%;
+            top: 40%;
+        }
+        100% {
+            border-radius: 100% 50%;
+            top: 50%;
+        }
+    }
+    .wave-bg:before {
+        content: "";
+        display: block;
+        border-radius: 100% 50%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: -33%;
+        top: 50%;
+        background-color: var(--primary);
+        z-index: -100;
+        animation-name: wave-bg-before;
+        animation-iteration-count: infinite;
+        animation-duration: 7s;
+    }
+    @keyframes wave-bg-after {
+        0% {
+            border-radius: 100% 50%;
+            top: 50%;
+        }
+        50% {
+            border-radius: 50% 70%;
+            top: 60%;
+        }
+        100% {
+            border-radius: 100% 50%;
+            top: 50%;
+        }
+    }
+    .wave-bg:after {
+        content: "";
+        display: block;
+        border-radius: 100% 50%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: -33%;
+        top: 50%;
+        background-color: var(--primary);
+        z-index: -100;
+        animation-name: wave-bg-after;
+        animation-iteration-count: infinite;
+        animation-duration: 10s;
     }
 </style>
 
