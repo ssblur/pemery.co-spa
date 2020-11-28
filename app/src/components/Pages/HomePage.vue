@@ -101,17 +101,17 @@
         position: relative;
         overflow: hidden;
     }
-    @keyframes wave-bg-before {
+    @keyframes wave-bg {
         0% {
-            border-radius: 100% 50%;
+            border-radius: 0% 0%;
             top: 50%;
         }
         50% {
-            border-radius: 50% 90%;
+            border-radius: 20% 20%;
             top: 40%;
         }
         100% {
-            border-radius: 100% 50%;
+            border-radius: 0% 0%;
             top: 50%;
         }
     }
@@ -126,24 +126,11 @@
         top: 50%;
         background-color: var(--primary);
         z-index: -100;
-        animation-name: wave-bg-before;
+        animation-name: wave-bg;
         animation-iteration-count: infinite;
         animation-duration: 7s;
     }
-    @keyframes wave-bg-after {
-        0% {
-            border-radius: 100% 50%;
-            top: 50%;
-        }
-        50% {
-            border-radius: 50% 70%;
-            top: 60%;
-        }
-        100% {
-            border-radius: 100% 50%;
-            top: 50%;
-        }
-    }
+
     .wave-bg:after {
         content: "";
         display: block;
@@ -155,9 +142,9 @@
         top: 50%;
         background-color: var(--primary);
         z-index: -100;
-        animation-name: wave-bg-after;
+        animation-name: wave-bg;
         animation-iteration-count: infinite;
-        animation-duration: 10s;
+        animation-duration: 8s;
     }
 </style>
 
