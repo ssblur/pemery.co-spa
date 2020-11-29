@@ -1,27 +1,28 @@
 <template>
-    <div class='container-fluid vue-homepage'>
-        <div class="container p-3 wave-bg border-primary">
+    <div class='container-fluid vue-homepage mt-5'>
+        <div class="container p-3 wave-bg">
             <div class="row">
                 <div class="col-md-6 col-12">
                     <h1 class='title title-grad-1 d-md-block d-none'>Patrick Emery</h1>
                     <h1 class='title title-grad-2 d-md-block d-none'>Patrick Emery</h1>
-                    <h1 class='title title-grad-3'>Patrick Emery</h1>
+                    <h1 class='title title-grad-3 d-md-block d-none'>Patrick Emery</h1>
+                    <h1 class='title title-grad-3 d-md-none d-block text-center'>Patrick Emery</h1>
                 </div>
                 <div class='col-md-6 col-12'>
-                    <img src='icon.png' class='w-25 float-right'>
+                    <img src='icon.png' class='icon-img'>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-md-6 col-12 mt-4">
                     <div class='btn-group float-left'>
                         <a href='https://github.com/ssblur/' title='Github' class='btn border-light go-btn' style='vertical-align: baseline;'>
                             <i class="fab fa-github mx-2"></i>
                         </a>
                         <a href='https://twitter.com/SSBlur' title='Twitter' class='btn border-light go-btn' style='vertical-align: baseline;'>
                             <i class="fab fa-twitter mx-2"></i>
-                        </a>
+                        </a> 
                     </div>
-                    <div class='btn-group float-left ml-5'>
+                    <div class='btn-group float-right float-md-left ml-5'>
                         <router-link to='/contract' class='btn border-light' hidden>
                             Contracts
                         </router-link>
@@ -30,15 +31,15 @@
                         </router-link>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 text-right">
-                    <div class="bottom-right mr-2">
-                        <div class='m-0 p-0'>
+                <div class="col-md-6 col-12 text-right mt-4">
+                    <div class="w-100 mr-2">
+                        <div class='m-0 p-0 float-left float-md-none'>
                             <a href="mailto:info@pemery.co" class='btn border-light'>
                                 info@pemery.co
                                 <i class="fas fa-envelope ml-2"></i>
                             </a>
                         </div>
-                        <div class='m-0 p-0'>
+                        <div class='m-0 p-0 float-right float-md-none'>
                             <a href="tel:+15204772587" class='btn border-light'>
                                 +1 (520) 477-2587
                                 <i class="fas fa-phone ml-2"></i>
@@ -57,19 +58,12 @@
         cursor: pointer;
     }
 
-    .vue-homepage {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .vue-homepage * .btn {
-        border-radius: 0;
+    .icon-img {
+        width: 100%;
     }
 
-    .bottom-right {
-        position: absolute;
-        bottom: 0;
-        right: 0;
+    .vue-homepage * .btn {
+        border-radius: 0;
     }
 
     .title-grad-1 {
@@ -103,6 +97,11 @@
     }
 
     @media (min-width: 768px){
+        .icon-img {
+            width: 25%;
+            float: right;
+        }
+
         .wave-bg {
             position: relative;
             overflow: hidden;
