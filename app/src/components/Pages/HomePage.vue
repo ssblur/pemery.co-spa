@@ -1,13 +1,15 @@
 <template>
     <div class='container-fluid vue-homepage'>
-        <div class="container p-3 wave-bg border-light">
+        <div class="container p-3 wave-bg border-primary">
             <div class="row">
-                <div class="col-6">
-                    <h1 class='title title-grad-1'>Patrick Emery</h1>
-                    <h1 class='title title-grad-2'>Patrick Emery</h1>
+                <div class="col-12">
+                    <h1 class='title title-grad-1 d-md-block d-none'>Patrick Emery</h1>
+                    <h1 class='title title-grad-2 d-md-block d-none'>Patrick Emery</h1>
                     <h1 class='title title-grad-3'>Patrick Emery</h1>
-                    <br>
-
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
                     <div class='btn-group float-left'>
                         <a href='https://github.com/ssblur/' title='Github' class='btn border-light go-btn' style='vertical-align: baseline;'>
                             <i class="fab fa-github mx-2"></i>
@@ -25,7 +27,7 @@
                         </router-link>
                     </div>
                 </div>
-                <div class="col-6 text-right">
+                <div class="col-md-6 col-12 text-right">
                     <div class="bottom-right mr-2">
                         <div class='m-0 p-0'>
                             <a href="mailto:info@pemery.co" class='btn border-light'>
@@ -97,54 +99,56 @@
         top: 0;
     }
 
-    .wave-bg {
-        position: relative;
-        overflow: hidden;
-    }
-    @keyframes wave-bg {
-        0% {
-            border-radius: 0% 0%;
+    @media (min-width: 768px){
+        .wave-bg {
+            position: relative;
+            overflow: hidden;
+        }
+        @keyframes wave-bg {
+            0% {
+                border-radius: 0% 0%;
+                top: 50%;
+            }
+            50% {
+                border-radius: 20% 20%;
+                top: 40%;
+            }
+            100% {
+                border-radius: 0% 0%;
+                top: 50%;
+            }
+        }
+        .wave-bg:before {
+            content: "";
+            display: block;
+            border-radius: 100% 50%;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: -33%;
             top: 50%;
+            background-color: var(--primary);
+            z-index: -100;
+            animation-name: wave-bg;
+            animation-iteration-count: infinite;
+            animation-duration: 7s;
         }
-        50% {
-            border-radius: 20% 20%;
-            top: 40%;
-        }
-        100% {
-            border-radius: 0% 0%;
-            top: 50%;
-        }
-    }
-    .wave-bg:before {
-        content: "";
-        display: block;
-        border-radius: 100% 50%;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: -33%;
-        top: 50%;
-        background-color: var(--primary);
-        z-index: -100;
-        animation-name: wave-bg;
-        animation-iteration-count: infinite;
-        animation-duration: 7s;
-    }
 
-    .wave-bg:after {
-        content: "";
-        display: block;
-        border-radius: 100% 50%;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        right: -33%;
-        top: 50%;
-        background-color: var(--primary);
-        z-index: -100;
-        animation-name: wave-bg;
-        animation-iteration-count: infinite;
-        animation-duration: 8s;
+        .wave-bg:after {
+            content: "";
+            display: block;
+            border-radius: 100% 50%;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            right: -33%;
+            top: 50%;
+            background-color: var(--primary);
+            z-index: -100;
+            animation-name: wave-bg;
+            animation-iteration-count: infinite;
+            animation-duration: 8s;
+        }
     }
 </style>
 

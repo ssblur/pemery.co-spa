@@ -48,6 +48,7 @@
                     <div class="col-3 font-italic">July 2019 - May 2020</div>
                     <div class="col-9 text-left">
                         <b>Role:</b> Tech Support (Greenville, NC)<br>
+                        <b>With:</b> East Carolina University<br>
                         <b>Expectations:</b> This position expected me to assist clients with technical issues, resolving on the spot where relevant, and thoroughly document these interactions. In this position I was also expected to assist clients in designing websites, and maintain basic websites and knowledgebase articles. <br>
                         <b>Technologies:</b> TeamDynamix (ticketing, knowledgebase), Cisco Finesse (chat, phones), Cisco Jabber, HTML, CSS, JavaScript, ColdFusion, FTP
                     </div>
@@ -137,6 +138,8 @@
 
                 let element = this.$refs.content;   
                 let className = element.className;
+                let width = element.style.width;
+                element.style.width = '1140px';
                 element.className = 'bg-white text-dark'; // This feels hackish to get print friendly styling, but it works without me having to pregenerate a PDF.
                 Html2Canvas(element).then(canvas => {
                     let img = canvas.toDataURL('image/png');
@@ -154,6 +157,7 @@
                     doc.save('resume.pdf');
                     this.print = false;
                     element.className = className;
+                    element.style.width = width;
                     this.$refs.spinner.hidden = true;
                     this.$toast.success('Successfully exported to PDF.');
                 });
