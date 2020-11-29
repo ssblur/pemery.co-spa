@@ -2,10 +2,13 @@
     <div class='container-fluid vue-homepage'>
         <div class="container p-3 wave-bg border-primary">
             <div class="row">
-                <div class="col-12">
+                <div class="col-md-6 col-12">
                     <h1 class='title title-grad-1 d-md-block d-none'>Patrick Emery</h1>
                     <h1 class='title title-grad-2 d-md-block d-none'>Patrick Emery</h1>
                     <h1 class='title title-grad-3'>Patrick Emery</h1>
+                </div>
+                <div class='col-md-6 col-12'>
+                    <img src='icon.png' class='w-25 float-right'>
                 </div>
             </div>
             <div class="row">
