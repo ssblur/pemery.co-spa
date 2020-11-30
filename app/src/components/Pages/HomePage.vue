@@ -52,6 +52,56 @@
                 </div>
             </div>
         </div>
+        <div class="container mt-3">
+            <collapsible-category title="Projects">
+                <portfolio-piece
+                    title="These Two Are Enemies"
+                    description="A Twitter / Discord bot created for fun. 
+                    The Twitter variant periodically posts various Disney characters who are, according to Disney's Fandom wiki, enemies.
+                    The Discord bot allows you to either search enemies using a text command or find two random enemies."
+                    image="resources/theseTwoAreEnemies.png"
+                    :links="[
+                        {
+                            url: 'https://twitter.com/TwoEnemies',
+                            icon: 'fab fa-twitter',
+                        },
+                        {
+                            url: 'https://github.com/ssblur/TheseTwoAreEnemies',
+                            icon: 'fab fa-github',
+                        },
+                        {
+                            url: 'https://discord.com/api/oauth2/authorize?client_id=778116699958280192&permissions=2048&scope=bot',
+                            icon: 'fab fa-discord',
+                        },
+                    ]"></portfolio-piece>
+                <portfolio-piece
+                    title="ResumEngine"
+                    description="An incredibly basic Django app which makes it easy to generate and send out custom portfolios to different businesses.
+                    Created as a means to test the platform for a contract I was looking at picking up around the time."
+                    :links="[
+                        {
+                            url: 'https://github.com/ssblur/resumengine',
+                            icon: 'fab fa-github',
+                        },
+                    ]"></portfolio-piece>
+                <portfolio-piece
+                    title="pemery.co"
+                    description="A website, built as a single-page application using Vue (with vue-router) and packed with Webpack.
+                    Created and maintained for fun, and as an exercise with Vue as practice for a professional project.
+                    Hosted using AWS CloudFront pointed at an S3 bucket."
+                    image="resources/pemeryCo.png"
+                    :links="[
+                        {
+                            url: 'https://github.com/ssblur/pemery.co-spa',
+                            icon: 'fab fa-github',
+                        },
+                        {
+                            url: 'https://pemery.co',
+                            icon: 'fas fa-globe',
+                        },
+                    ]"></portfolio-piece>
+            </collapsible-category>
+        </div>
     </div>
 </template>
 
@@ -158,7 +208,14 @@
 </style>
 
 <script>
+    import PortfolioPiece from './portfolio/PortfolioPiece.vue';
+    import CollapsibleCategory from '../CollapsibleCategory.vue';
+
     export default {
+        components: {
+            PortfolioPiece,
+            CollapsibleCategory,
+        },
         methods: {
             copyDiscord() {
                 const copyField = document.createElement('textarea');
