@@ -21,6 +21,9 @@
                         <a href='https://twitter.com/SSBlur' title='Twitter' class='btn border-light go-btn' style='vertical-align: baseline;'>
                             <i class="fab fa-twitter mx-2"></i>
                         </a> 
+                        <a @click='copyDiscord' title='Discord' class='btn border-light go-btn' style='vertical-align: baseline;'>
+                            <i class="fab fa-discord mx-2"></i>
+                        </a> 
                     </div>
                     <div class='btn-group float-right float-md-left ml-5'>
                         <router-link to='/contract' class='btn border-light' hidden>
@@ -156,6 +159,17 @@
 
 <script>
     export default {
-        methods: {}
+        methods: {
+            copyDiscord() {
+                const copyField = document.createElement('textarea');
+                copyField.value = "patrick emery#1224";
+                document.body.appendChild(copyField);
+                copyField.select();
+                document.execCommand('copy');
+                document.body.removeChild(copyField);
+
+                this.$toast.success('Copied "patrick emery#1224" to the clipboard! Feel free to add me on Discord with any job requests or inqueries.');
+            }
+        }
     }
 </script>
