@@ -1,7 +1,9 @@
 <template>
-    <div class='collapsible-category' :class='{"active" : active}' @click='setActive'>
-        <div class='collapsible-category-title'>{{ active ? '-' : '+' }}{{ title }}</div>
-        <slot></slot>
+    <div class='collapsible-category' :class='{"active" : active}'>
+        <div class='collapsible-category-title' @click='setActive'>{{ active ? '-' : '+' }}{{ title }}</div>
+        <div class="container">
+            <slot></slot>
+        </div>
     </div>
 </template>
 

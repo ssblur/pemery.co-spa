@@ -1,5 +1,5 @@
 <template>
-    <div class='card m-1 portfolio-piece float-left'>
+    <div class='card portfolio-piece d-inline-flex'>
         <div class="card-body">
             <img v-if='image' class="card-img-top" :src='image'>
             <h3 class="card-title"> {{ title }}</h3>
@@ -39,7 +39,9 @@
 
     @media (min-width: 992px){
         .portfolio-piece {
-            width: 25%;
+            box-sizing: border-box;
+            margin: 5px;
+            width: calc(25% - 12.5px);
         }
     }
 </style>

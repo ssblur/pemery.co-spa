@@ -100,6 +100,21 @@
                             icon: 'fas fa-globe',
                         },
                     ]"></portfolio-piece>
+                <portfolio-piece
+                    title="Advent of Code 2020"
+                    description="Advent of Code is a lovely coding challenge put on by Eric Wastl annually.
+                    If you enjoy puzzles and scripting, I'd recommend checking it out using the website linked below."
+                    image="resources/adventOfCode2020.png"
+                    :links="[
+                        {
+                            url: 'https://github.com/ssblur/AoC2020/',
+                            icon: 'fab fa-github',
+                        },
+                        {
+                            url: 'https://adventofcode.com/2020/about',
+                            icon: 'fas fa-globe',
+                        },
+                    ]"></portfolio-piece>
             </collapsible-category>
         </div>
     </div>
