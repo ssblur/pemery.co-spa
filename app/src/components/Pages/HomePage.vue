@@ -55,6 +55,22 @@
         <div class="container mt-3">
             <collapsible-category title="Projects">
                 <portfolio-piece
+                    title="Itty for Tiny Life"
+                    description="Itty is a mod that adds a familiar looking social media site to the game Tiny Life.
+                    Featured on the Tiny Life homepage!
+                    Use the website link below to check out Tiny Life."
+                    image="resources/Itty.png"
+                    :links="[
+                        {
+                            url: 'https://github.com/ssblur/IttyMod',
+                            icon: 'fab fa-github',
+                        },
+                        {
+                            url: 'https://tinylifegame.com/',
+                            icon: 'fas fa-globe',
+                        },
+                    ]"></portfolio-piece>
+                <portfolio-piece
                     title="These Two Are Enemies"
                     description="A Twitter / Discord bot created for fun. 
                     The Twitter variant periodically posts various Disney characters who are, according to Disney's Fandom wiki, enemies.
