@@ -27,8 +27,17 @@
                     <div class="col-3 font-weight-bold">EXPERIENCE</div>
                     <div class="col-9 text-left"></div>
                 </div>
+                <div class="row pb-2 border-bottom border-light">
+                    <div class="col-3 font-italic">December 2021 - Present</div>
+                    <div class="col-9 text-left">
+                        <b>Role:</b> Senior Developer (Remote)<br>
+                        <b>With:</b> Capital One Financial Corporation<br>
+                        <b>Expectations:</b> This position expected me to maintain enterprise software used internally by Capital One and work with DevOps technologies to assist in deployment. <br>
+                        <b>Technologies:</b> AWS (Lambda, S3, CloudFront, Route 53, CloudWatch, etc.), Python, Terraform, Jenkins, various internal tools.
+                    </div>
+                </div>
                 <div class="row pb-2">
-                    <div class="col-3 font-italic">September 2020 - Present</div>
+                    <div class="col-3 font-italic">September 2020 - December 2021</div>
                     <div class="col-9 text-left">
                         <b>Role:</b> Senior Developer / Project Lead<br>
                         <b>With:</b> DataGroup Technologies (Greenville, NC)<br>
@@ -44,7 +53,7 @@
                         <b>Technologies:</b> Various. Notable technologies include Python (Tensorflow and Django), Lua, Rust, HTML, JavaScript, CSS, PHP, and a variety of other less-used languages and technologies.
                     </div>
                 </div>
-                <div class="row pb-2 border-bottom border-light">
+                <div hidden class="row pb-2 border-bottom border-light">
                     <div class="col-3 font-italic">July 2019 - May 2020</div>
                     <div class="col-9 text-left">
                         <b>Role:</b> Tech Support (Greenville, NC)<br>
@@ -61,13 +70,13 @@
                     <div class="col-3 font-italic">Technologies</div>
                     <div class="col-9 text-left">
                         <ul>
+                            <li>Python (Boto, Django, TensorFlow, etc.)</li>
+                            <li>AWS (Lambda, DynamoDB, EC2, etc.)</li>
                             <li>JavaScript (Node, jQuery, Vue, Webpack)</li>
                             <li>PHP (5.5, 7.4, Laravel)</li>
                             <li>JVM (Java, Groovy, Kotlin, Scala)</li>
-                            <li>AWS (S3 / Glacier, Lambda, Dynamo)</li>
-                            <li>Python (Django, Flask, SKL, TensorFlow)</li>
                             <li>SQL (MySQL, SQLite, Postgres)</li>
-                            <li>NoSQL Databasing (Dynamo, Firebase)</li>
+                            <li>NoSQL Databasing (DynamoDB, Firebase)</li>
                         </ul>
                     </div>
                 </div>
@@ -75,9 +84,9 @@
                     <div class="col-3 font-italic">Skills</div>
                     <div class="col-9 text-left">
                         <ul>
-                            <li>Documentation</li>
                             <li>Effective Communication</li>
                             <li>Independent Time Management</li>
+                            <li>Advanced Technical Writing</li>
                         </ul>
                     </div>
                 </div>
