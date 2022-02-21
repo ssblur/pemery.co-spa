@@ -42,12 +42,6 @@
                                 <i class="fas fa-envelope ml-2"></i>
                             </a>
                         </div>
-                        <div class='m-0 p-0 float-right float-md-none'>
-                            <a href="tel:+15204772587" class='btn border-light'>
-                                +1 (520) 477-2587
-                                <i class="fas fa-phone ml-2"></i>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
